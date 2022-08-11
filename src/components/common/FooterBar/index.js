@@ -29,7 +29,7 @@ const menu = [
 
 const FooterBar = () => {
   return (
-    <div className="hero w-sceen min-h-[calc(75vh-4rem)] bg-[url('../../public/images/footer-bg.png')] bg-white">
+    <div className="hero w-sceen min-h-fit bg-[url('../../public/images/footer-bg.png')] bg-white">
       <footer className="footer footer-center  ">
         <div className="grid grid-flow-col gap-4  "></div>
         <div>
@@ -41,15 +41,15 @@ const FooterBar = () => {
               const Icon = item.icons;
               return (
                 <Link href={item.href} key={item.name}>
-                  <a className="rounded-full bg-secondary h-14 w-14 flex justify-center items-center">
-                    <Icon className="text-3xl h-7 w-7 text-white " />
+                  <a className="rounded-full bg-secondary h-10 w-10 flex justify-center items-center">
+                    <Icon className="text-3xl h-6 w-6 text-white " />
                   </a>
                 </Link>
               );
             })}
           </div>
         </div>
-        <div>
+        <div className="text-medium pb-10">
           <p>Weddingly Wedding Planner 2022</p>
         </div>
       </footer>
