@@ -34,13 +34,13 @@ const FooterBar = () => {
         <div className="grid grid-flow-col gap-4  "></div>
         <div>
           <div className="pt-28">
-            <Image src={logo} width={350} height={350} />
+            <Image src={logo} width={350} height={350} alt="" />
           </div>
           <div className="grid grid-flow-col gap-4">
             {menu.map((item) => {
               const Icon = item.icons;
               return (
-                <Link href={item.href}>
+                <Link href={item.href} key={item.name}>
                   <a className="rounded-full bg-secondary h-14 w-14 flex justify-center items-center">
                     <Icon className="text-3xl h-7 w-7 text-white " />
                   </a>
