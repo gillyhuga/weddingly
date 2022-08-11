@@ -30,13 +30,13 @@ const menu = [
 const FooterBar = () => {
   return (
     <div className="hero w-sceen min-h-[calc(75vh-4rem)] bg-[url('../../public/images/footer-bg.png')] bg-white">
-      <footer class="footer footer-center  ">
-        <div class="grid grid-flow-col gap-4  "></div>
+      <footer className="footer footer-center  ">
+        <div className="grid grid-flow-col gap-4  "></div>
         <div>
           <div className="pt-28">
             <Image src={logo} width={350} height={350} />
           </div>
-          <div class="grid grid-flow-col gap-4">
+          <div className="grid grid-flow-col gap-4">
             {menu.map((item) => {
               const Icon = item.icons;
               return (
