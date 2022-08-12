@@ -62,8 +62,14 @@ const NavigationBar = () => {
             </div>
             <div className="navbar-end ">
                 <ul className="menu menu-horizontal p-0">
-                    <li className='px-2'><a className="btn bg-transparent text-black border-primary hover:bg-primary-focus hover:border-none">Sign Up</a></li>
-                    <li><a className="btn bg-primary text-black border-none hover:bg-primary-focus">Login</a></li>
+                    <Link href="/auth/registrasi" passHref={true}>
+                        <li className='px-2'><a className="btn bg-transparent text-black border-primary hover:bg-primary-focus hover:border-none">Sign Up</a></li>
+                    </Link>
+                    <li>
+                        <Link href='/auth/login'>
+                            <a className="btn bg-primary text-black border-none hover:bg-primary-focus">Login</a>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </div>
