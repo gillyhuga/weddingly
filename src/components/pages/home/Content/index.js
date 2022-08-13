@@ -43,10 +43,10 @@ const Content = () => {
             </div>
           ))}
           <div className="absolute bottom-0 top-0 p-5 lg:p-11 z-0">
-            <Image src={bgcontent} />
+            <Image src={bgcontent} alt="" />
           </div>
           <div className="hero container mx-auto absolute top-3/4 lg:top-full  p-5 lg:p-11 z-0">
-            <Image src={bgwhy} width={170} height={400} />
+            <Image src={bgwhy} width={170} height={400} alt="" />
           </div>
         </div>
       </div>
