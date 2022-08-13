@@ -5,8 +5,8 @@ import Image from "next/image";
 function Why() {
   return (
     <div>
-      <div class=" hero container mx-auto">
-        <div class="hero-content grid grid-cols-1 md:grid-cols-2">
+      <div className=" hero container mx-auto">
+        <div className="hero-content grid grid-cols-1 md:grid-cols-2">
           <div className=" grid-cols-12">
             <Image src={why} alt="" />
           </div>
