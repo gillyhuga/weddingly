@@ -21,7 +21,7 @@ module.exports = {
         "base-200": '#DDE2E5', //grey-2
         "base-100": '#F5F5F5', //grey-1
 
-        "error": '#EF40', //red
+        // "error": '#EF40', //red
         "yellow": '#F2F720', //yellow
         "green": '#13C139', //green
       },

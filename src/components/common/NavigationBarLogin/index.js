@@ -19,7 +19,7 @@ const menu = [
     },
 ]
 
-const NavigationBar = () => {
+const NavigationBarLogin = () => {
     const router = useRouter()
     return (
         <div className="navbar bg-white">
@@ -58,7 +58,7 @@ const NavigationBar = () => {
                             passHref={true}
                         >
                             <li>
-                                <a className={`before:block before:absolute before:-inset-0 before:w-2/5 before:h-0.5 before:translate-y-[34px] ${router.route === item.href.toLowerCase() ? "before:bg-primary text-black font-semibold" : "before:bg-base-300 text-gray-400"} before:translate-x-6 relative inline-block z-0`}>
+                                <a className={`before:block before:absolute before:-inset-0 before:w-2/5 before:h-0.5 before:translate-y-[34px] before:translate-x-6 relative inline-block z-0 ${router.route === item.href.toLowerCase() ? "before:bg-primary text-black" : "before:bg-base-300 text-gray-400"}`}>
                                     {item.name}
                                 </a>
                             </li>
@@ -67,19 +67,25 @@ const NavigationBar = () => {
                 </ul>
             </div>
             <div className="navbar-end ">
-                <ul className="menu menu-horizontal p-0 mr-6">
-                    <Link href="/auth/registrasi" passHref={true}>
-                        <li className='px-2'><a className="btn px-6 bg-transparent text-black border-primary hover:bg-primary-focus hover:border-white">Sign Up</a></li>
-                    </Link>
-                    <li>
-                        <Link href='/auth/login'>
-                            <a className="btn px-6 bg-primary text-black border-none hover:bg-primary-focus">Login</a>
-                        </Link>
-                    </li>
-                </ul>
+                <div className="dropdown dropdown-end">
+                    <label tabIndex="0" className="btn btn-ghost btn-circle avatar mr-6">
+                        <div className="w-10 bg-[url('../../public/images/avatar-image.jpg')] rounded-full"></div>
+                    </label>
+                    <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                            <Link href="/planner">
+                                <a>Profile</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <label htmlFor="my-modal-6" className="btn modal-button border-0 hover:bg-gray-200 text-sm normal-case font-normal justify-start min-h-[36px] h-[36px]">Logout</label>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     );
 };
 
-export default NavigationBar;
+export default NavigationBarLogin;
