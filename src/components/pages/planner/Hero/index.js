@@ -1,7 +1,7 @@
 import React from "react";
 import status from "@/public/images/planner-status.png";
 import Image from "next/image";
-
+// menu
 const menu = [
   {
     id: 1,
