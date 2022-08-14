@@ -14,10 +14,10 @@ const menu = [
 function Hero() {
   return (
     <div className="bg-white pt-3 lg:pt-16">
-      <div className=" container mx-auto lg:left-10 p-7 lg:p-0">
+      <div className=" container mx-auto  lg:left-10 p-7 lg:p-0">
         <h1 className="text-2xl font-bold absolute z-10">Your Planner</h1>
-        <div className="relative left-0 ">
-          <Image src={kotak} alt="" width={100} height={30} />
+        <div className="relative left-0 bottom-0 ">
+          <Image src={kotak} alt="" width={100} height={30} className="z-0" />
         </div>
       </div>
 
