@@ -7,11 +7,9 @@ import Alert from "@/components/common/Alert";
 const Layout = ({ children }) => {
   return (
     <>
-      <div>
+      <div className="bg-white">
         <NavigationBar />
-        <Modal title="Log Out" desc="Are you sure?" action="Log Out" />
         <main>{children}</main>
-        <Alert alert="Save Changes" />
         <FooterBar />
       </div>
     </>
