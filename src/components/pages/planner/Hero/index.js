@@ -1,5 +1,4 @@
 import React from "react";
-import kotak from "@/public/images/planner-kotak.png";
 import status from "@/public/images/planner-status.png";
 import Image from "next/image";
 
@@ -15,9 +14,13 @@ function Hero() {
   return (
     <div className="bg-white pt-3 lg:pt-10">
       <div className=" container mx-auto  lg:left-10 p-7 lg:p-7">
-        <h1 className="text-2xl font-bold absolute z-10">Your Planner</h1>
-        <div className="relative left-0 bottom-0 ">
-          <Image src={kotak} alt="" width={100} height={30} className="z-0" />
+        <div className="relative pl-6">
+          <span className="inline-block w-36 lg:w-44 h-6 bg-primary "></span>
+          <div className="absolute -top-6 -left-2">
+            <h1 className="z-40 lg:text-4xl text-3xl font-bold">
+              Your Profile
+            </h1>
+          </div>
         </div>
       </div>
 
