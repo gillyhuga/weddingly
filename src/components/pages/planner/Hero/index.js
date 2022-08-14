@@ -18,7 +18,7 @@ function Hero() {
           <span className="inline-block w-36 lg:w-44 h-6 bg-primary "></span>
           <div className="absolute -top-6 -left-2">
             <h1 className="z-40 lg:text-4xl text-3xl font-bold">
-              Your Profile
+              Your Planner
             </h1>
           </div>
         </div>
