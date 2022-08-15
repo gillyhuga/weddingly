@@ -78,7 +78,7 @@ const NavigationBarLogin = () => {
                             </Link>
                         </li>
                         <li>
-                            <label htmlFor="my-modal-6" className="btn modal-button border-0 hover:bg-gray-200 text-sm normal-case font-normal justify-start min-h-[36px] h-[36px]">Logout</label>
+                            <label htmlFor="my-modal" className="btn modal-button border-0 hover:bg-gray-200 text-sm normal-case font-normal justify-start min-h-[36px] h-[36px]">Logout</label>
                         </li>
                     </ul>
                 </div>
