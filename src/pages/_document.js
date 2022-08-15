@@ -5,7 +5,6 @@ export default function Document() {
     <Html lang="en" data-theme="mytheme" className="bg-white">
       <Head>
         <title>Weedingly | Wedding Planner</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <body>
         <Main />
