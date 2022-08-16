@@ -29,11 +29,11 @@ const menu = [
 
 const FooterBar = () => {
   return (
-    <div className="hero w-sceen min-h-fit bg-[url('../../public/images/footer-bg.png')] bg-white">
+    <div className="hero bg-[url('../../public/images/footer-bg.png')]">
       <footer className="footer footer-center  ">
         <div className="grid grid-flow-col gap-4  "></div>
         <div>
-          <div className="pt-28">
+          <div>
             <Image src={logo} width={350} height={350} alt="" />
           </div>
           <div className="grid grid-flow-col gap-4">

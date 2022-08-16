@@ -225,8 +225,8 @@ const Budget = () => {
   };
 
   return (
-    <div>
-      <div className=" container mx-auto  lg:left-10 p-7 lg:p-7 z-10">
+    <div className="pb-20">
+      <div className=" container mx-auto  lg:left-10 p-7 lg:p-7 z-10 ">
         <div className="relative pl-16 lg:pl-20">
           <span className="inline-block w-40 lg:w-48 h-6 bg-primary "></span>
           <div className=" absolute -top-6 -left-0">

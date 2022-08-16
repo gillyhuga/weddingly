@@ -5,8 +5,8 @@ import { MdDeleteOutline } from "react-icons/md";
 
 function Todo() {
   return (
-    <div>
-      <div className=" container mx-auto h-96  lg:left-10 p-7 lg:p-7 z-10">
+    <div className="h-[80vh]">
+      <div className=" container mx-auto  lg:left-10 p-7 lg:p-7 z-10">
         <div className=" container mx-auto  lg:left-10 p-7 lg:p-7 z-10">
           <div className="relative pl-16 lg:pl-20">
             <span className="inline-block w-40 lg:w-48 h-6 bg-primary "></span>
@@ -113,7 +113,7 @@ function Todo() {
           </div>
         </div>
 
-        <div className=" text-center pt-16">
+        <div className=" text-center pt-52">
           <label
             htmlFor="my-modalss"
             className="btn px-10  shadow-lg capitalize tracking-wide text-lg font-medium text-white transition-colors duration-200 border-0 transform bg-secondary rounded-full hover:bg-secondary-focus focus:outline-none focus:bg-secondary focus:ring focus:ring-blue-300 focus:ring-opacity-50"
