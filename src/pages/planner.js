@@ -13,7 +13,7 @@ const menu = [
 
 const Hero = () => {
   return (
-    <div className="bg-white pt-3 lg:pt-10">
+    <div className="bg-white pt-3 pb-10 lg:pt-10">
       <div className=" container mx-auto  lg:left-10 p-7 lg:p-7">
         <div className="relative pl-6">
           <span className="inline-block w-40 lg:w-48 h-6 bg-primary "></span>
