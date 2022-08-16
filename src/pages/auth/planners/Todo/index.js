@@ -5,8 +5,8 @@ import { MdDeleteOutline } from "react-icons/md";
 
 function Todo() {
   return (
-    <div className="h-[80vh]">
-      <div className=" container mx-auto  lg:left-10 p-7 lg:p-7 z-10">
+    <div className="h-[80vh] pt-10">
+      <div className=" container mx-auto  lg:left-10  z-10">
         <div className=" container mx-auto  lg:left-10 p-7 lg:p-7 z-10">
           <div className="relative pl-16 lg:pl-20">
             <span className="inline-block w-40 lg:w-48 h-6 bg-primary "></span>
@@ -37,27 +37,27 @@ function Todo() {
 
         <div className=" card grid grid-cols-5  gap-4 text-center pt-20 items-center">
           <div className="">
-            <h1 className="underline underline-offset-8 decoration-secondary-content text-2xl font-bold">
+            <h1 className="underline underline-offset-8 decoration-secondary-content text-1xl lg:text-2xl font-bold">
               Wedding Date
             </h1>
           </div>
           <div className="">
-            <h1 className="underline underline-offset-8 decoration-secondary-content text-2xl font-bold">
+            <h1 className="underline underline-offset-8 decoration-secondary-content text-1xl lg:text-2xl font-bold">
               Budget
             </h1>
           </div>
           <div className="">
-            <h1 className="underline underline-offset-8 decoration-secondary-content text-2xl font-bold">
+            <h1 className="underline underline-offset-8 decoration-secondary-content text-1xl lg:text-2xl font-bold">
               Location
             </h1>
           </div>
           <div className="">
-            <h1 className="underline underline-offset-8 decoration-secondary-content text-2xl font-bold">
+            <h1 className="underline underline-offset-8 decoration-secondary-content text-1xl lg:text-2xl font-bold">
               Detail
             </h1>
           </div>
           <div className="">
-            <h1 className="underline underline-offset-8 decoration-secondary-content text-2xl font-bold">
+            <h1 className="underline underline-offset-8 decoration-secondary-content text-1xl lg:text-2xl font-bold">
               Delete
             </h1>
           </div>

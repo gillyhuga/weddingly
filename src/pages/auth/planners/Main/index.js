@@ -16,7 +16,7 @@ const Addplanner = () => {
   const [location, setLocation] = useState("Jakarta");
 
   return (
-    <div>
+    <div className="pt-10">
       <div className="absolute -right-0">
         <Image src={bgplanner} height={1200} width={900} alt="" />
       </div>
