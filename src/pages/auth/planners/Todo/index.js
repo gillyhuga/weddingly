@@ -5,31 +5,28 @@ import { MdDeleteOutline } from "react-icons/md";
 
 function Todo() {
   return (
-    <div className="h-[80vh]">
+    <div className="h-[80vh] pt-10">
       <div className=" container mx-auto  lg:left-10 p-7 lg:p-7 z-10">
-        <div className=" container mx-auto  lg:left-10 p-7 lg:p-7 z-10">
-          <div className="relative pl-16 lg:pl-20">
-            <span className="inline-block w-40 lg:w-48 h-6 bg-primary "></span>
-            <div className=" absolute -top-6 -left-0">
-              <div className="flex items-center ...">
-                <div>
-                  <Link href="/auth/planners/Budget" passHref={true}>
-                    <BsArrowLeft className="lg:text-4xl text-3xl font-bold mr-4" />
-                  </Link>
-                </div>
-                <div>
-                  <h1 className="z-40 lg:text-4xl text-3xl font-bold">
-                    Your Planner
-                  </h1>
-                </div>
-
-                <div>
-                  <Link href="/auth/planners/Budget" passHref={true}>
-                    <button className="btn btn-primary ml-5 text-black rounded-full">
-                      Add+
-                    </button>
-                  </Link>
-                </div>
+        <div className="relative pl-16 lg:pl-20">
+          <span className="inline-block w-40 lg:w-48 h-6 bg-primary "></span>
+          <div className=" absolute -top-6 -left-0">
+            <div className="flex items-center ...">
+              <div>
+                <Link href="/auth/planners/Budget" passHref={true}>
+                  <BsArrowLeft className="lg:text-4xl text-3xl font-bold mr-4" />
+                </Link>
+              </div>
+              <div>
+                <h1 className="z-40 lg:text-4xl text-3xl font-bold">
+                  Your Planner
+                </h1>
+              </div>
+              <div>
+                <Link href="/auth/planners/Budget" passHref={true}>
+                  <button className="btn btn-primary ml-5 text-black rounded-full">
+                    Add+
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
