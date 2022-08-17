@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsArrowLeft, BsCalendarRange } from "react-icons/Bs";
+import { BsArrowLeft, BsCalendarRange } from "react-icons/bs";
 import { TbTag } from "react-icons/tb";
 import { TbLocation } from "react-icons/tb";
 import banner from "@/public/images/planner-main.png";
