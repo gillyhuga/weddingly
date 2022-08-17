@@ -1,3 +1,4 @@
+import Image from "next/image"
 export default function Profile() {
     return (
         <div className="flex justify-center h-screen bg-primary-content">
@@ -5,7 +6,7 @@ export default function Profile() {
                 <div className="flex flex-col items-center h-full w-full px-20 pt-20 ">
                     <div className="avatar">
                         <div className="w-32 rounded-full">
-                            <img src="https://placeimg.com/192/192/people" />
+                            <Image src="https://placeimg.com/192/192/people" alt="" />
                         </div>
                     </div>
                     <label className="block pt-6">
@@ -33,7 +34,7 @@ export default function Profile() {
                                 <div className=" items-center h-full px-20">
                                     <div className="avatar">
                                         <div className="w-24 rounded-full">
-                                            <img src="https://placeimg.com/192/192/people" />
+                                            <Image src="https://placeimg.com/192/192/people" alt="" />
                                         </div>
                                     </div>
 
