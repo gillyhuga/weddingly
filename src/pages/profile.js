@@ -16,7 +16,6 @@ export default function Profile() {
                     <h1 className="pt-6 text-4xl font-medium text-black">Emma Julie Suh</h1>
                     <h1 className="pt-6 text-3xl font-thin text-black">emmajuliesuh@gmail.com</h1>
                 </div>
-
             </div>
 
             <div className="flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6 ">
@@ -37,7 +36,6 @@ export default function Profile() {
                                             <Image src="https://placeimg.com/192/192/people" alt="" />
                                         </div>
                                     </div>
-
                                 </div>
                                 <label className="block pt-6">
                                     <input type="file" accept="image/png, image/jpg, image/jpeg"
