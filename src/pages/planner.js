@@ -1,6 +1,7 @@
 import React from "react";
 import status from "@/public/images/planner-status.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const menu = [
   {
@@ -10,9 +11,9 @@ const menu = [
   },
 ];
 
-function Hero() {
+const Hero = () => {
   return (
-    <div className="bg-white pt-3 lg:pt-10">
+    <div className="bg-white pt-3 pb-10 lg:pt-10">
       <div className=" container mx-auto  lg:left-10 p-7 lg:p-7">
         <div className="relative pl-6">
           <span className="inline-block w-40 lg:w-48 h-6 bg-primary "></span>
@@ -37,14 +38,17 @@ function Hero() {
                 </h1>
               </div>
             ))}
-            <button className="btn btn-primary rounded-full px-5 lg:px-8 p-2 lg:p-3 shadow-md ">
-              <p className="text-black">Add Planner</p>
-            </button>
+
+            <Link href="/auth/planners/Main" passHref={true}>
+              <button className="btn btn-primary rounded-full px-5 lg:px-8 p-2 lg:p-3 shadow-md  text-black">
+                Add Planner
+              </button>
+            </Link>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Hero;
