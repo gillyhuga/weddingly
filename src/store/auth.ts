@@ -14,13 +14,13 @@ export const authentication = createSlice({
     name: "auth",
     initialState,
     reducers: {
-        login: (state, action) => {
+        setToken: (state, action) => {
             state.token = action.payload
             state.isAuthorized = true;
         },
-        logout: () => initialState,
+        removeToken: () => initialState,
     },
 });
 
-export const { login, logout } = authentication.actions;
+export const { setToken, removeToken } = authentication.actions;
 export default authentication.reducer;

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Link from 'next/link';
 import { getToken } from '@/lib/fetchApi';
-import { login } from 'src/store/auth';
+import { setToken } from 'src/store/auth';
 import toast, { Toaster } from "react-hot-toast";
 import router from 'next/router';
 
@@ -26,12 +26,13 @@ export default function Login() {
     const handleSubmit = (e: any) => {
         e.preventDefault();
         getToken(authForm.email, authForm.password).then((data) => {
-            dispatch(login(data))
+            dispatch(setToken(data))
+            localStorage.setItem("token", data)
             toast.success('Login Succesful!')
             router.push('/planner')
         })
     }
-    
+
     return (
         <div className="bg-white dark:bg-white">
             <div className="flex justify-center h-screen">
