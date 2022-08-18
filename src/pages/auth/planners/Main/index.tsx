@@ -12,8 +12,7 @@ import Link from "next/link";
 const Addplanner = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [tanggal, setTanggal] = useState("08/15/2022");
-  const [money, setMoney] = useState(50000000);
-  const [location, setLocation] = useState("Jakarta");
+   const [location, setLocation] = useState("Jakarta");
 
   return (
     <div className="pt-10">
@@ -86,7 +85,7 @@ const Addplanner = () => {
                           <input
                             type="number"
                             name="number"
-                            placeholder={money}
+                            placeholder="50000000"
                             className="block w-full py-3 pl-12 pr-3 mt-2 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 peer"
                           />
                           <p className="mt-2 ml-5 invisible peer-invalid:visible text-pink-600 text-sm">

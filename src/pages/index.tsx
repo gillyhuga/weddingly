@@ -6,10 +6,10 @@ import Why from "@/components/pages/home/Why";
 export default function Home() {
   return (
     <div>
-      <Hero />
-      <Content />
-      <Why />
-      <About />
+    <Hero />
+    < Content />
+    <Why />
+    < About />
     </div>
   );
 }
