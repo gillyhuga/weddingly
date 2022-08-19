@@ -8,9 +8,14 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import BgPlanner from "@/public/images/addplanner-bg.png";
 
-const AddPlanner = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
+type Props = {
+  location: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  date: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  total: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void,
+}
 
+const AddPlanner = ({ onSubmit, total, date, location }: Props) => {
   return (
     <div className="pt-10">
       <div className="absolute -right-0">
@@ -36,7 +41,7 @@ const AddPlanner = () => {
             <div className="grid-cols-12">
               <div className="flex justify-center align-middle">
                 <div className="mt-8">
-                  <form>
+                  <form onSubmit={onSubmit}>
                     <div>
                       <div>
                         <label className="block mb-2 text-md text-gray-600 dark:text-black">
@@ -47,16 +52,15 @@ const AddPlanner = () => {
                           <span className="absolute inset-y-0 left-0 flex items-center pl-4">
                             <div className="flex">
                               <BsCalendarRange className="h-5 w-5 text-slate-500" />
-                              <DatePicker
-                                className="pl-4"
-                                selected={selectedDate}
-                                placeholderText="08/15/2022"
-                                onChange={(date) => setSelectedDate(date)}
-                              />
+
                             </div>
                           </span>
 
-                          <input className="block lg:w-96 md:w-80 w-full py-3 pl-12 pr-3 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"></input>
+                          <input
+                            type="date"
+                            name="date"
+                            onChange={date}
+                            className="block lg:w-96 md:w-80 w-full py-3 pl-12 pr-3 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"></input>
                         </label>
                       </div>
 
@@ -72,8 +76,9 @@ const AddPlanner = () => {
 
                           <input
                             type="number"
-                            name="number"
+                            name="total"
                             placeholder="50000000"
+                            onChange={total}
                             className="block w-full py-3 pl-12 pr-3 mt-2 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 peer"
                           />
                           <p className="mt-2 ml-5 invisible peer-invalid:visible text-pink-600 text-sm">
@@ -92,9 +97,10 @@ const AddPlanner = () => {
                             <TbLocation className="h-5 w-5 text-slate-500" />
                           </span>
                           <input
-                            type="name"
-                            name="name"
+                            type="text"
+                            name="location"
                             placeholder="Jakarta"
+                            onChange={location}
                             className="block w-full py-3 pl-12 pr-3 mt-2 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                           />
                         </label>

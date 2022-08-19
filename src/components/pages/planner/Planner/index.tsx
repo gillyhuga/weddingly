@@ -1,8 +1,32 @@
 import Link from "next/link";
-import React from "react";
-import { MdDeleteOutline } from "react-icons/md";
+import React, { useState, useEffect } from "react";
+import AddPlanner from "@/components/pages/planner/AddPlanner";
+import { getAllPlan } from "@/lib/fetchApi";
+import { setPlan } from "src/store/plan";
+import { useDispatch, useSelector } from "react-redux";
+import List from "../List";
+import { RootState } from "src/store";
+
+
+type Props = {
+    key: number;
+    date: string;
+    total_budget: string;
+    location: string;
+
+}
 
 function ListPlanner() {
+    const dispatch = useDispatch();
+    const { plan } = useSelector((state: RootState) => state.plan);
+
+    useEffect(() => {
+        getAllPlan().then((response) => {
+            dispatch(setPlan(response.data))
+        })
+    }, [dispatch])
+
+    console.log(plan)
     return (
         <div className="h-[80vh] pt-10">
             <div className="flex flex-row pr-14">
@@ -29,7 +53,6 @@ function ListPlanner() {
                 <table className="table w-full ">
                     <thead >
                         <tr className="underline underline-offset-8 decoration-secondary-content text-2xl font-bold ">
-                            <th></th>
                             <th>Wedding Date</th>
                             <th>Budget</th>
                             <th>Location</th>
@@ -38,47 +61,12 @@ function ListPlanner() {
                         </tr>
                     </thead>
                     <tbody >
-                        <tr>
-                            <th>1</th>
-                            <td>08/15/2022</td>
-                            <td>Rp. 50.000.000</td>
-                            <td>Jakarta</td>
-                            <td>
-                                <Link href="/auth/planners/Budget" passHref={true}>
-                                    <button className="bg-primary hover:primary text-black  py-2 px-4 rounded-full">
-                                        Detail
-                                    </button>
-                                </Link>
-                            </td>
-                            <td>
-                                <div>
-                                    <label htmlFor="my-modals" className="">
-                                        <MdDeleteOutline className="text-center text-2xl" />
-                                    </label>
-                                    <input type="checkbox" id="my-modals" className="modal-toggle" />
-                                    <div className="modal">
-                                        <div className="modal-box ">
-                                            <h3 className="font-bold text-lg">Delete Planner</h3>
-                                            <p className="py-6">Are you sure?</p>
-                                            <div className="modal-action flex justify-center gap-2">
-                                                <label
-                                                    htmlFor="my-modals"
-                                                    className="btn btn-error rounded-full text-white tracking-wider px-10"
-                                                >
-                                                    Delete
-                                                </label>
-                                                <label
-                                                    htmlFor="my-modals"
-                                                    className="btn btn-success rounded-full text-white tracking-wider px-10"
-                                                >
-                                                    Cancel
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+                        {
+                            plan.length ? plan.map((item: any) =>
+                                <List key={0} date={item.date} total_budget={item.total_budget} location={item.location} />
+                            ) :
+                                null
+                        }
                     </tbody>
                 </table>
             </div>

@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import auth from "./auth";
+import plan from "./plan";
 
 
 export const store = configureStore({
     reducer: {
         auth: auth,
+        plan: plan,
     },
 });
 
