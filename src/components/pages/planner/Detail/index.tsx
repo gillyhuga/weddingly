@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BsArrowLeft } from "react-icons/Bs";
 import beauty from "@/public/images/budget-1.png";
 import music from "@/public/images/budget-2.png";
 import catering from "@/public/images/budget-3.png";
