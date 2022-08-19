@@ -17,7 +17,7 @@ function List({ date, total_budget, location }: Props) {
             <td>{total_budget}</td>
             <td>{location}</td>
             <td>
-                <Link href="/auth/planners/Budget" passHref={true}>
+                <Link href="/planner/detail" passHref={true}>
                     <button className="bg-primary hover:primary text-black  py-2 px-4 rounded-full">
                         Detail
                     </button>
