@@ -1,20 +1,24 @@
 import Image from "next/image"
+import { useSelector } from "react-redux";
+import { RootState } from "src/store";
+
+
 export default function Profile() {
+    const { user } = useSelector((state: RootState) => state.user);
+
     return (
         <div className="flex justify-center h-screen bg-primary-content">
             <div className="hidden lg:block lg:w-2/5 bg-white">
                 <div className="flex flex-col items-center h-full w-full px-20 pt-20 ">
                     <div className="avatar">
-                        <div className="w-32 rounded-full">
-                            <Image src="https://placeimg.com/192/192/people" alt="" />
-                        </div>
+                            <div className="w-32 bg-[url('../../public/images/avatar-image.jpg')] rounded-full"></div>
                     </div>
                     <label className="block pt-6">
                         <input type="file" accept="image/png, image/jpg, image/jpeg"
                             className="block w-full text-sm text-black file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-black hover:file:bg-primary-focus" />
                     </label>
-                    <h1 className="pt-6 text-4xl font-medium text-black">Emma Julie Suh</h1>
-                    <h1 className="pt-6 text-3xl font-thin text-black">emmajuliesuh@gmail.com</h1>
+                    <h1 className="pt-6 text-4xl font-medium text-black">{user.name}</h1>
+                    <h1 className="pt-6 text-3xl font-thin text-black">{user.email}</h1>
                 </div>
             </div>
 
@@ -32,9 +36,9 @@ export default function Profile() {
                             <div className=" flex flex-col items-center xl:mx-8 ">
                                 <div className=" items-center h-full px-20">
                                     <div className="avatar">
-                                        <div className="w-24 rounded-full">
-                                            <Image src="https://placeimg.com/192/192/people" alt="" />
-                                        </div>
+                                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-6">
+                                            <div className="w-24 bg-[url('../../public/images/avatar-image.jpg')] rounded-full"></div>
+                                        </label>
                                     </div>
                                 </div>
                                 <label className="block pt-6">
@@ -54,7 +58,7 @@ export default function Profile() {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
                                     </span>
-                                    <input type="text" name="name" placeholder="Your Name" value="Emma Julie Suh" className="block w-full py-3 pl-12 pr-3 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500" />
+                                    <input type="text" name="name" placeholder="Your Name" value={user.name} className="block w-full py-3 pl-12 pr-3 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500" />
                                 </label>
                             </div>
 
@@ -67,7 +71,7 @@ export default function Profile() {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                         </svg>
                                     </span>
-                                    <input type="email" name="email" placeholder="example@example.com" value="emmajuliesuh@gmail.com" className="block w-full py-3 pl-12 pr-3 mt-2 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 peer" />
+                                    <input type="email" name="email" placeholder="example@example.com" value={user.email} className="block w-full py-3 pl-12 pr-3 mt-2 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 peer" />
                                     <p className="mt-2 ml-5 invisible peer-invalid:visible text-pink-600 text-sm">
                                         Please provide a valid email address.
                                     </p>
@@ -95,7 +99,7 @@ export default function Profile() {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
                                     </span>
-                                    <input type="text" name="partner-name" placeholder="Partner Name" value="Johnny Sheeran" className="block w-full py-3 pl-12 pr-3 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500" />
+                                    <input type="text" name="partner-name" placeholder="Partner Name" value={user.partner} className="block w-full py-3 pl-12 pr-3 text-gray-700 placeholder-gray-400 bg-white shadow rounded-full dark:bg-white dark:text-black dark:border-gray-700 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500" />
                                 </label>
                             </div>
                             <div className="flex flex-row-reverse mt-6">

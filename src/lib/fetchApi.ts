@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ADD_PLAN, ALL_PLAN, LOGIN, REGISTER } from "../config"
+import { ADD_PLAN, ALL_PLAN, LOGIN, PROFILE, REGISTER } from "../config"
 
 export const getAccount = async (nameUser: string, emailUser: string, passwordUser: string) => {
     const response = await axios.post(REGISTER, {
@@ -32,4 +32,13 @@ export const addPlan = async (locationPlan: string, datePlan: string, budgetPlan
         user_id: 1,
     })
     return response.data
+}
+
+export const getUserProfile = async (token: string) => {
+    const response = await axios.get(PROFILE, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        },
+    })
+    return response.data;
 }
